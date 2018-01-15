@@ -32,7 +32,7 @@
 					<li><a href="#" class="smooth">Home</a></li>
 
 					<?php
-				  	$args = array( 'orderby' => 'slug', 'parent' => 0 );
+				  	$args = array( 'orderby' => 'slug', 'parent' => 0, 'exclude' => 1 );
 				  	$categories = get_categories( $args );
 				  	foreach ( $categories as $category ) {
 				  		echo '<li><a class ="' . $category->slug . '" href="' . $category->slug . '" rel="bookmark">' . $category->name . '</a>
