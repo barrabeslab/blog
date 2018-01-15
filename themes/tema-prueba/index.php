@@ -1,15 +1,5 @@
 <?php get_header(); ?>
-<section class="main-section js-height" style="background:url(<?php bloginfo('template_url'); ?>/img/hero.png) center no-repeat;background-size:cover;">
-		<!-- <div class="mask"></div> -->
-		<div class="container js-height">
-			<article class="main-title">
-				<h5 class="color-underline-cat2">INVESTIGACIÓN</h5>
-				<h1>Artificial Intelligence As A Service: Image recognition</h1>
-				<a href="" class="basic-link">Continue reading</a>
-			</article>
-		</div>
 
-	</section>
 	<main class="main-page">
 		<section class="top-section">
 			<div class="container">
@@ -105,8 +95,8 @@
 							<h2><?php _e('No hay contenidos disponibles', 'apk'); ?></h2>
 						</header>
 					<div class="post-content">
-					<?php the_excerpt(); ?> 
-						
+					<?php the_excerpt(); ?>
+
 					</div>
 				</article>
 					<?php endif; ?>
