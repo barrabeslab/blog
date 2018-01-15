@@ -62,30 +62,43 @@
 			<div class="row">
 				<main class="col-sm-12">
 				<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
-					<article <?php post_class(); ?>>
+				<a href="<?php the_permalink(); ?>">
+					<article class="article-<?php $category = get_the_category();echo $category[0]->slug;?>">
 						<header>
+						<?php if( has_post_thumbnail()): ?>
 						<figure style="background:url(<?php the_post_thumbnail_url('full'); ?>)no-repeat center; background-size:cover">
-						<?php
-									if ( has_post_thumbnail() ) {
-										the_post_thumbnail('full');
-									}
-									?>
-					<!-- <img src="img/hero.png" alt=""> -->
-							</figure>
-							<h3 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-							<p class="info-date"><?php the_time( get_option('date_format')); ?> &bull;  / </p>
-							<p class="info-author"><strong>By <?php $author_id=$post->post_author; ?>
-							<?php the_author_meta( 'display_name' , $author_id ); ?></strong></p>
-							<p class="info-author"><strong><a href=""><?php the_category(','); ?></a></strong></p>
+						</figure>
+						<?php endif; ?>
 						</header>
 						<main>
+							<h3 class="title"><?php the_title(); ?></h3>
 							<div class="basic-font">
 								<?php the_excerpt(); ?>
 							</div>
-						</main>
-						<a href="<?php the_permalink(); ?>" class="basic-link"><?php _e('Seguir leyendo', 'apk'); ?></a>
+						
+						<div class="post-info">
+							<div class="post-info-detail">
+							<div class="post-author">
+								<?php $author_id=$post->post_author; ?>
+								<img src="<?php the_author_meta( 'avatar' , $author_id ); ?> "  class="avatar" />
+								<div>
+									<p><?php the_author_meta( 'display_name' , $author_id ); ?> Apellido Largo  </p>
+									<p><?php the_time( get_option('date_format')); ?></p>
+								</div>
+							</div>
+							
+							<div class="actions">
+							<img src="<?php bloginfo('template_url'); ?>/img/like.svg">
+							<img src="<?php bloginfo('template_url'); ?>/img/share.svg">
+							</div>
+						</div>
+						</div>
+					</main>
+
+						
 						
 					</article>
+					</a>
 					<?php endwhile; else : ?>
 					<article class="">
 						<header>
@@ -98,19 +111,7 @@
 				</article>
 					<?php endif; ?>
 				</main>
-				<!-- <aside class="col-sm-4">
-					<div class="widget">
-							<header>
-								<h3 class="title">Artificial Intelligence As A Service: Image recognition</h3>
-							</header>
-					</div>
-					<div class="widget">
-							<header>
-								<h3 class="title">Artificial Intelligence As A Service: Image recognition</h3>
-							</header>
-
-					</div>
-				</aside> -->
+				
 			</div>
 		</section>
 			<!-- NEWSLETTER  -->
@@ -127,6 +128,6 @@
 			</div>
 		</section>
 	</main>
-	</main>
+
 
 <?php get_footer(); ?>
