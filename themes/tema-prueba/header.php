@@ -28,7 +28,7 @@
 					</a>
 				</div>
 
-				<ul class="links col-md-8">
+				<ul class="links">
 					<li><a href="#" class="smooth">Home</a></li>
 
 					<?php
