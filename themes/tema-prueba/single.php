@@ -1,7 +1,7 @@
 
 <?php get_header();?>
 <main class="main-page">
-			
+
 		<section id="main-content">
 
 			<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
@@ -18,9 +18,12 @@
 							<div class="post-title">
 								<h5 class="color-underline-<?php $category = get_the_category();echo $category[0]->slug;?>"><?php $category = get_the_category();echo $category[0]->cat_name;?></h5>
 								<h1><?php the_title(); ?></h1>
+								<?php echo do_shortcode(
+									'[rt_reading_time postfix="min read" postfix_singular="min read" label=""]'
+								); ?>
 							</div>
 						</div>
-						
+
 					<section class="post-info">
 						<div class="container">
 							<div class="post-info-detail">
@@ -32,41 +35,41 @@
 									<p><?php the_time( get_option('date_format')); ?></p>
 								</div>
 							</div>
-							
+
 							<div class="actions">
 							<img src="<?php bloginfo('template_url'); ?>/img/like.svg">
 							<img src="<?php bloginfo('template_url'); ?>/img/share.svg">
 							</div>
 						</div>
 						</div>
-						
-					
+
+
 						</section>
-					
-					
+
+
 					</header>
 					<div class="post-content container">
 						<?php the_content(); ?>
 						<div class="tags-area">
 					<?php the_tags( '<ul><li>', '</li><li>', '</li></ul>' ); ?>
 					</div>
-						
+
 					</div>
-					
-					
-				
+
+
+
 				</article>	<!-- article -->
 				<?php endwhile; endif; ?>
 
 				<!-- #comments-area -->
 				<!-- <div id="comments-area" class="container">
 				php	<comments_template(); >
-				
+
 				</div>
 				 -->
-				
+
 			</section><!-- /#main-content -->
-			
+
 				<!-- NEWSLETTER  -->
 		<section class="newsletter">
 			<div class="container">
@@ -81,7 +84,7 @@
 			</div>
 		</section>
 	</main>
-	
 
-			
+
+
 			<?php get_footer(); ?>
