@@ -1,7 +1,7 @@
 
 <?php get_header();?>
 <main class="main-page">
-			
+
 		<section id="main-content">
 
 			<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
@@ -18,6 +18,9 @@
 							<div class="post-title">
 								<h5 class="color-underline-<?php $category = get_the_category();echo $category[0]->slug;?>"><?php $category = get_the_category();echo $category[0]->cat_name;?></h5>
 								<h1><?php the_title(); ?></h1>
+								<?php echo do_shortcode(
+									'[rt_reading_time postfix="min read" postfix_singular="min read" label=""]'
+								); ?>
 							</div>
 						</div>
 						<section class="post-info">
@@ -52,7 +55,7 @@
 				<!-- #comments-area -->
 				<!-- <div id="comments-area" class="container">
 				php	<comments_template(); >
-				
+
 				</div>
 				 -->
 				
@@ -87,7 +90,7 @@
 			</section>
 
 	</main>
-	
 
-			
+
+
 			<?php get_footer(); ?>

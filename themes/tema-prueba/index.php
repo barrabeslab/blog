@@ -64,8 +64,11 @@
 							<h3 class="title"><?php the_title(); ?></h3>
 							<div class="basic-font">
 								<?php the_excerpt(); ?>
+								<?php echo do_shortcode(
+									'[rt_reading_time postfix="min read" postfix_singular="min read" label=""]'
+								); ?>
 							</div>
-						
+
 						<div class="post-info">
 							<div class="post-info-detail">
 							<div class="post-author">
@@ -76,7 +79,7 @@
 									<p><?php the_time( get_option('date_format')); ?></p>
 								</div>
 							</div>
-							
+
 							<div class="actions">
 							<img src="<?php bloginfo('template_url'); ?>/img/like.svg">
 							<img src="<?php bloginfo('template_url'); ?>/img/share.svg">
@@ -85,8 +88,8 @@
 						</div>
 					</main>
 
-						
-						
+
+
 					</article>
 					</a>
 					<?php endwhile; else : ?>
@@ -101,7 +104,7 @@
 				</article>
 					<?php endif; ?>
 				</main>
-				
+
 			</div>
 		</section>
 			<!-- NEWSLETTER  -->
