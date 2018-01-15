@@ -207,7 +207,7 @@ text-decoration: none;
 .top-section{
    background:  #f8f8f8;
    padding:30px 0 40px;
-   
+
 }
 .title-2{
   font-size: 23px;
@@ -228,7 +228,7 @@ text-decoration: none;
   margin-right:20px;
   width:320px;
   flex: 0 0 320px;
-  
+
 }
 .top-article figure{
   width:100%;
@@ -266,7 +266,7 @@ text-decoration: none;
 .blog article img{
   width:100%;
   height: auto;
-  
+
 }
 .blog article figure > img {
   position:absolute;
@@ -468,6 +468,10 @@ footer .footer-links li {
   justify-content: space-between;
 }
 
+#menu nav .header {
+  padding: 0;
+}
+
 #menu .main-header {
   background: #fff;
 }
@@ -480,6 +484,10 @@ footer .footer-links li {
 #menu .main-header.header--scroll .btn_menu .icon_menu:before,
 #menu .main-header.header--scroll .btn_menu .icon_menu:after {
   background: #ffffff;
+}
+
+#menu .main-header.header--scroll .btn_search path {
+  fill: #ffffff;
 }
 
 #menu .btn_search {
@@ -544,10 +552,8 @@ footer .footer-links li {
   width: 248px;
   position: fixed;
   z-index: 1;
-  top: 0;
   left: -248px;
   background-color: #111;
-  overflow-x: hidden;
   transition: 0.5s;
   padding: 0 24px;
 }
@@ -556,7 +562,7 @@ footer .footer-links li {
   height: 70px;
   line-height: 70px;
   font-size: 13px;
-  font-weight: normal;
+  font-weight: 300;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -572,23 +578,24 @@ footer .footer-links li {
   margin-bottom: 24px;
   list-style-type: square;
   color: red;
+  margin-left: 15px;
 }
 
 #menu nav .links li:first-child {
   list-style-type: none;
-  margin-left: -15px;
+  margin-left: 0;
 }
 
 #menu nav .links a {
   color: #ffffff;
   font-size: 24px;
-  font-family: 'FuturaPTWebBook', sans-serif;
+  font-family: 'FuturaPTWebLight', sans-serif;
 }
 
 #menu nav .options {
   color: #ffffff;
   font-size: 18px;
-  font-family: 'FuturaPTWebBook', sans-serif;
+  font-family: 'FuturaPTWebLight', sans-serif;
   margin-top: 32px;
   text-transform: uppercase;
 }
@@ -655,10 +662,6 @@ header#menu,
   transition: margin-left .5s;
 }
 
-.main-page {
-  margin-top: 56px;
-}
-
 /*post*/
 .img-article{
   width:100%;
@@ -686,7 +689,7 @@ header#menu,
 }
 .post-title h1, .post-title h5{
   color:#fff;
-} 
+}
 .post-title h5{
   margin-bottom: 15px;
   font-family: 'FuturaPTWebLight', sans-serif;
@@ -711,7 +714,7 @@ header#menu,
 .post-info-detail, .post-author{
   display:flex;
   justify-content: space-between;
- 
+
 }
 .post-author{
 padding-right: 15px;

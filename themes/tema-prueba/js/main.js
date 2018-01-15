@@ -8,6 +8,12 @@ $(".btn_menu").click(function () {
   }
 });
 
+$(".mask").click(function () {
+  if ($("body").hasClass('nav-sidebar--open')) {
+    hideMenu();
+  }
+});
+
 function hideMenu(){
   $("body").removeClass('nav-sidebar--open');
 }
