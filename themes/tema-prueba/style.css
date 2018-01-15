@@ -116,6 +116,17 @@ text-decoration: none;
   font-weight: 400;
 }
 
+.basic-font p {
+  margin-bottom: 10px;
+}
+
+.span-reading-time {
+  color: #9b9b9b;
+  text-align: right;
+  margin: 0 0 0 auto;
+  display: block;
+ }
+
 [class*="color-underline"]::after{
   content:"";
   width:69px;
