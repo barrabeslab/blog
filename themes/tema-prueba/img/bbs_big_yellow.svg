@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="800px" height="231px" viewBox="0 0 800 231" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>bbs_big_yellow</title>
+    <desc>Created with Sketch.</desc>
+    <defs/>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="barrabes" sketch:type="MSArtboardGroup" transform="translate(-240.000000, -285.000000)" fill="#FFF019">
+            <g id="bbs_big_yellow" sketch:type="MSLayerGroup" transform="translate(240.000000, 284.000000)">
+                <path d="M228.836521,58.8705209 L57.5447298,231.758958 L0.450513403,174.138708 L171.742304,1.24104173 L228.836521,58.8705209" id="Fill-1" sketch:type="MSShapeGroup"/>
+                <path d="M171.742304,1.24104173 L343.015811,174.138708 L285.930737,231.758958 L114.629804,58.8705209 L171.742304,1.24104173" id="Fill-2" sketch:type="MSShapeGroup"/>
+                <path d="M457.204244,58.8705209 L285.930737,231.758958 L228.836521,174.138708 L400.11917,1.24104173 L457.204244,58.8705209" id="Fill-3" sketch:type="MSShapeGroup"/>
+                <path d="M400.11917,1.24104173 L571.383534,174.138708 L514.289318,231.758958 L343.015811,58.8705209 L400.11917,1.24104173" id="Fill-4" sketch:type="MSShapeGroup"/>
+                <path d="M685.590251,58.8705209 L514.289318,231.758958 L457.204244,174.138708 L628.477751,1.24104173 L685.590251,58.8705209" id="Fill-5" sketch:type="MSShapeGroup"/>
+                <path d="M628.477751,1.24104173 L799.769542,174.138708 L742.675325,231.758958 L571.383534,58.8705209 L628.477751,1.24104173" id="Fill-6" sketch:type="MSShapeGroup"/>
+            </g>
+        </g>
+    </g>
+</svg>
