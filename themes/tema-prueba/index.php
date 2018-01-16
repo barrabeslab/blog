@@ -75,7 +75,7 @@
 								<?php $author_id=$post->post_author; ?>
 								<img src="<?php the_author_meta( 'avatar' , $author_id ); ?> "  class="avatar" />
 								<div>
-									<p><?php the_author_meta( 'display_name' , $author_id ); ?> Apellido Largo  </p>
+									<p><?php the_author_meta( 'display_name' , $author_id ); ?></p>
 									<p><?php the_time( get_option('date_format')); ?></p>
 								</div>
 							</div>

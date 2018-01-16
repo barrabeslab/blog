@@ -28,4 +28,10 @@ $(window).on("scroll", function() {
       //remove the background property so it comes transparent again (defined in your css)
      $(".main-header").removeClass("header--scroll");
   }
+  if($(window).scrollTop() > 400) {
+    $(".nav-footer").addClass("footer--show");
+  } else {
+    //remove the background property so it comes transparent again (defined in your css)
+   $(".nav-footer").removeClass("footer--show");
+  }
 });
