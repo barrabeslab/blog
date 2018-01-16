@@ -73,7 +73,9 @@
 							<div class="post-info-detail">
 							<div class="post-author">
 								<?php $author_id=$post->post_author; ?>
-								<img src="<?php the_author_meta( 'avatar' , $author_id ); ?> "  class="avatar" />
+								<?php
+									 echo get_avatar(get_the_author_meta('user_email'), $size = '48');
+								?>
 								<div>
 									<p><?php the_author_meta( 'display_name' , $author_id ); ?></p>
 									<p><?php the_time( get_option('date_format')); ?></p>

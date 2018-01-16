@@ -18,9 +18,6 @@
 							<div class="post-title">
 								<h5 class="color-underline-<?php $category = get_the_category();echo $category[0]->slug;?>"><?php $category = get_the_category();echo $category[0]->cat_name;?></h5>
 								<h1><?php the_title(); ?></h1>
-								<?php echo do_shortcode(
-									'[rt_reading_time postfix="min read" postfix_singular="min read" label=""]'
-								); ?>
 							</div>
 						</div>
 						<section class="post-info">
@@ -28,10 +25,18 @@
 								<div class="post-info-detail">
 									<div class="post-author">
 										<?php $author_id=$post->post_author; ?>
-										<img src="<?php the_author_meta( 'avatar' , $author_id ); ?> "  class="avatar" />
+										<?php
+											 echo get_avatar(get_the_author_meta('user_email'), $size = '48');
+										?>
 										<div>
 											<p><?php the_author_meta( 'display_name' , $author_id ); ?></p>
-											<p><?php the_time( get_option('date_format')); ?></p>
+											<div class="post-meta">
+												<p><?php the_time( get_option('date_format')); ?></p>
+												<span class="meta-divider"></span>
+												<p><?php echo do_shortcode(
+													'[rt_reading_time postfix="min read" postfix_singular="min read" label=""]'
+												); ?><p>
+											</div>
 										</div>
 									</div>
 									<div class="actions">

@@ -700,7 +700,20 @@ footer,
 .post-header figure{
   height:340px;
   overflow: hidden;
+  position: relative;
 }
+
+.post-header figure:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+  opacity: 0.4;
+}
+
 .post-header figure img{
  min-width: 100%;
  width:auto;
@@ -716,6 +729,10 @@ footer,
 .post-title{
   position:absolute;
   bottom:24px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  padding: 0 16px;
 }
 .post-title h1, .post-title h5{
   color:#fff;
@@ -787,6 +804,12 @@ padding-right: 15px;
 }
 .color-underline.cat1::after{
   background: #ffc521;
+}
+.post-meta {
+  display: flex;
+}
+.post-meta .span-reading-time {
+  color: #000000;
 }
 /*post comments */
 #comments-area{
@@ -874,6 +897,14 @@ display: inline-block;
 }
 
 #wtr-progress.progress--show {
+  bottom:0!important;
   margin-bottom: 46px !important;
   z-index: 2;
+}
+
+.meta-divider {
+  margin: 0 4.5px;
+}
+.meta-divider:after {
+  content: '\00B7';
 }
