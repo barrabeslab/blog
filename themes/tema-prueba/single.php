@@ -7,12 +7,7 @@
 			<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 			<article class="post">
 				<header class="post-header">
-						<figure>
-							<?php
-							if ( has_post_thumbnail() ) {
-								the_post_thumbnail('full');
-							}
-							?>
+						<figure style="background:url(<?php the_post_thumbnail_url('full'); ?>)no-repeat center; background-size:cover">
 						</figure>
 						<div class="container">
 							<div class="post-title">
