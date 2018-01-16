@@ -48,7 +48,7 @@
 							<?php the_tags( '<ul><li>', '</li><li>', '</li></ul>' ); ?>
 						</div>
 					</div>
-				</article>	
+				</article>
 				<!-- article -->
 				<?php endwhile; endif; ?>
 
@@ -58,10 +58,10 @@
 
 				</div>
 				 -->
-				
+
 			</section>
 			<!-- /#main-content -->
-			
+
 			<!-- NEWSLETTER  -->
 			<section class="newsletter">
 				<div class="container">
@@ -76,21 +76,21 @@
 			</section>
 			<!-- NEWSLETTER  -->
 
-		<section class="nav-footer">
-			<h5 class="title-footer">
-				<?php the_title(); ?>
-			</h5>
-			<div class="actions">
-				<img src="<?php bloginfo('template_url'); ?>/img/like.svg">
-				<img src="<?php bloginfo('template_url'); ?>/img/share.svg">
-			</div>
-			<div class="navigation">
-				<img src="<?php bloginfo('template_url'); ?>/img/arrow_next.svg">
-			</div>
-			</section>
+
 
 	</main>
 
-
+	<section class="nav-footer">
+		<h5 class="title-footer">
+			<?php the_title(); ?>
+		</h5>
+		<div class="actions">
+			<img src="<?php bloginfo('template_url'); ?>/img/like.svg">
+			<img src="<?php bloginfo('template_url'); ?>/img/share.svg">
+		</div>
+		<div class="navigation">
+			<img src="<?php bloginfo('template_url'); ?>/img/arrow_next.svg">
+		</div>
+		</section>
 
 			<?php get_footer(); ?>
