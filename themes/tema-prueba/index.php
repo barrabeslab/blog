@@ -52,46 +52,43 @@
 			<div class="row">
 				<main class="col-sm-12">
 				<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
-				<a href="<?php the_permalink(); ?>">
+			
 					<article class="article-<?php $category = get_the_category();echo $category[0]->slug;?>">
-						<header>
-						<?php if( has_post_thumbnail()): ?>
-						<figure style="background:url(<?php the_post_thumbnail_url('full'); ?>)no-repeat center; background-size:cover">
-						</figure>
-						<?php endif; ?>
-						</header>
-						<main>
-							<h3 class="title"><?php the_title(); ?></h3>
-							<div class="basic-font">
-								<?php the_excerpt(); ?>
-								<?php echo do_shortcode(
-									'[rt_reading_time postfix="min read" postfix_singular="min read" label=""]'
-								); ?>
-							</div>
-
-						<div class="post-info">
-							<div class="post-info-detail">
-							<div class="post-author">
-								<?php $author_id=$post->post_author; ?>
-								<img src="<?php the_author_meta( 'avatar' , $author_id ); ?> "  class="avatar" />
-								<div>
-									<p><?php the_author_meta( 'display_name' , $author_id ); ?></p>
-									<p><?php the_time( get_option('date_format')); ?></p>
+						<a href="<?php the_permalink(); ?>">
+							<header>
+							<?php if( has_post_thumbnail()): ?>
+							<figure style="background:url(<?php the_post_thumbnail_url('full'); ?>)no-repeat center; background-size:cover">
+							</figure>
+							<?php endif; ?>
+							</header>
+							<main>
+								<h3 class="title"><?php the_title(); ?></h3>
+								<div class="basic-font">
+									<?php the_excerpt(); ?>
+									<?php echo do_shortcode(
+										'[rt_reading_time postfix="min read" postfix_singular="min read" label=""]'
+									); ?>
 								</div>
-							</div>
-
-							<div class="actions">
-							<img src="<?php bloginfo('template_url'); ?>/img/like.svg">
-							<img src="<?php bloginfo('template_url'); ?>/img/share.svg">
-							</div>
-						</div>
-						</div>
-					</main>
-
-
-
+							</main>
+						</a>
+						<footer class="post-info">
+							<div class="post-info-detail">
+									<div class="post-author">
+										<?php $author_id=$post->post_author; ?>
+										<img src="<?php the_author_meta( 'avatar' , $author_id ); ?> "  class="avatar" />
+										<div>
+											<p><?php the_author_meta( 'display_name' , $author_id ); ?></p>
+											<p><?php the_time( get_option('date_format')); ?></p>
+										</div>
+								</div>
+									<div class="actions">
+										<img src="<?php bloginfo('template_url'); ?>/img/like.svg">
+										<img src="<?php bloginfo('template_url'); ?>/img/share.svg">
+									</div>
+								</div>
+						</footer>
 					</article>
-					</a>
+				
 					<?php endwhile; else : ?>
 					<article class="">
 						<header>
