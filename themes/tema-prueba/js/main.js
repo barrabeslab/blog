@@ -30,8 +30,11 @@ $(window).on("scroll", function() {
   }
   if($(window).scrollTop() > 400) {
     $(".nav-footer").addClass("footer--show");
+    console.log($("#wtr-progress"));
+    $("#wtr-progress").addClass("progress--show");
   } else {
     //remove the background property so it comes transparent again (defined in your css)
    $(".nav-footer").removeClass("footer--show");
+   $("#wtr-progress").removeClass("progress--show");
   }
 });
