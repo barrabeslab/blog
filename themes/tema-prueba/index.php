@@ -1,6 +1,43 @@
 <?php get_header(); ?>
 
 	<main class="main-page">
+		<section class="blog main-post container">
+			<div class="row">
+				<div class="col-xs-12">
+					<article style="background:url(http://localhost:8888/wordpress/wp-content/themes/tema-prueba/img/hero.png)no-repeat center; background-size:cover">
+						<a href="http://localhost:8888/wordpress/2017/12/18/entrada-3/">
+							<!-- <header>
+								<figure style="background:url(http://localhost:8888/wordpress/wp-content/uploads/2017/12/a6754933-b54b-4715-8276-6a0c7ef00931.jpg)no-repeat center; background-size:cover"></figure>
+							</header> -->
+							<main>
+								<h3 class="title">Artificial Intelligence As A Service: Image recognition</h3>
+								<div class="basic-font">
+									<p>Among the new storage systems that are appearing within the Big Data universe, Cassandra is one of the most interesting and significant. Cassandra is defined as a distributed and massively scalable NoSQL database, and this, from our point of view, is its greatest virtue: the capacity to scale up linearly. Additionally, Cassandra introduces very interesting […]</p>
+									<span class="span-reading-time"> 1 min read</span>
+								</div>
+							</main>
+						</a>
+						<footer class="post-info">
+							<div class="post-info-detail">
+								<div class="post-author">
+									<img alt="" src="http://0.gravatar.com/avatar/f35d54ab4199477152cc9b2b3f64ab11?s=48&amp;d=mm&amp;r=g" srcset="http://0.gravatar.com/avatar/f35d54ab4199477152cc9b2b3f64ab11?s=96&amp;d=mm&amp;r=g 2x" class="avatar avatar-48 photo" height="48" width="48">
+									<div>
+										<p>barrabes</p>
+										<p>18 diciembre, 2017</p>
+									</div>
+								</div>
+								<div class="actions">
+									<img src="http://localhost:8888/wordpress/wp-content/themes/tema-prueba/img/like-white.svg">
+									<img src="http://localhost:8888/wordpress/wp-content/themes/tema-prueba/img/share-white.svg">
+								</div>
+							</div>
+						</footer>
+					</article>
+				</div>
+			</div>
+		</section>
+
+
 		<section class="top-section">
 			<div class="container">
 				<h2 class="title-2 color-underline">Top Stories

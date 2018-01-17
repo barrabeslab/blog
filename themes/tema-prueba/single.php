@@ -73,8 +73,6 @@
 			</section>
 			<!-- NEWSLETTER  -->
 
-
-
 	</main>
 
 	<section class="nav-footer">

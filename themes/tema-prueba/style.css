@@ -743,7 +743,7 @@ text-decoration: none;
 }
 
 #menu.search--open + .main-page {
-  margin-top: 109px;
+  margin-top: 114px;
 }
 
 #menu .header--scroll .btn_close .icon_menu:before,
@@ -1036,4 +1036,40 @@ display: inline-block;
 }
 .full-width{
   width: 100%;
+}
+
+.main-post {
+  margin-bottom: 0;
+}
+
+.main-post main {
+  background: rgba(20, 32, 42, 0.6);
+}
+
+.main-post article .title {
+  color: #ffffff;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.main-post article .title::after {
+  content: none;
+}
+
+.main-post article .post-info {
+  background: rgba(20, 32, 42, 0.6);
+}
+
+.main-post article .span-reading-time {
+  color: #ffffff;
+}
+
+.main-post article .basic-font {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.main-post .post-author p {
+  color: #ffffff;
+  font-size: 14px;
 }
