@@ -25,13 +25,7 @@
 										?>
 										<div>
 											<p><?php the_author_meta( 'display_name' , $author_id ); ?></p>
-											<div class="post-meta">
-												<p><?php the_time( get_option('date_format')); ?></p>
-												<span class="meta-divider"></span>
-												<p><?php echo do_shortcode(
-													'[rt_reading_time postfix="min read" postfix_singular="min read" label=""]'
-												); ?><p>
-											</div>
+											<p><?php the_time( get_option('date_format')); ?></p>
 										</div>
 									</div>
 									<div class="actions">
@@ -43,6 +37,9 @@
 						</section>
 					</header>
 					<div class="post-content container">
+						<p><?php echo do_shortcode(
+							'[rt_reading_time postfix="min read" postfix_singular="min read" label=""]'
+						); ?><p>
 						<?php the_content(); ?>
 						<div class="tags-area">
 							<?php the_tags( '<ul><li>', '</li><li>', '</li></ul>' ); ?>

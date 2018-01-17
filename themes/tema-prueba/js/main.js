@@ -18,8 +18,20 @@ function hideMenu(){
   $("body").removeClass('nav-sidebar--open');
 }
 
+function hideSearch(){
+  $("#menu").removeClass('search--open');
+}
 
+$(".btn_search").click(function() {
+  $("#menu").addClass('search--open');
+  $(".header-search form input[type='text']").val('');
+});
 
+$(".header-menu .btn_close").click(function() {
+  if ($("#menu").hasClass('search--open')) {
+    hideSearch();
+  }
+});
 
 $(window).on("scroll", function() {
   if($(window).scrollTop() > 56) {
@@ -30,7 +42,6 @@ $(window).on("scroll", function() {
   }
   if($(window).scrollTop() > 400) {
     $(".nav-footer").addClass("footer--show");
-    console.log($("#wtr-progress"));
     $("#wtr-progress").addClass("progress--show");
   } else {
     //remove the background property so it comes transparent again (defined in your css)
