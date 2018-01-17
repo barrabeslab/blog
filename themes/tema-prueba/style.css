@@ -126,6 +126,7 @@ text-decoration: none;
   text-align: right;
   margin: 0 0 0 auto;
   display: block;
+  font-size:14px;
  }
 
 [class*="color-underline"]::after{
@@ -337,7 +338,6 @@ text-decoration: none;
   background: #cf1463;
 }
 .blog article .basic-font{
-  margin-bottom:20px;
   font-family: 'FuturaPTWebLight', sans-serif;
   font-weight: 300;
   line-height: 1.38;
@@ -1072,4 +1072,74 @@ display: inline-block;
 .main-post .post-author p {
   color: #ffffff;
   font-size: 14px;
+}
+
+.meta-divider {
+  margin: 0 4.5px;
+}
+.meta-divider:after {
+  content: '\00B7';
+}
+.video-responsive{
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+  margin-bottom:20px;
+}
+.video-responsive iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+}
+/*Comments area*/
+#comments-area h3 {
+  font-family: 'FuturaPTWebDemi', sans-serif;
+  font-size: 24px;
+  color: #333333;
+  font-weight: normal;
+  margin-bottom:16px;
+}
+#comments-area #respond, #comments-list .comment-body{
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  padding:8px;
+  margin-bottom:16px;
+}
+#comments-area form textarea{
+  width:100%;
+  border:none;
+  background-color : transparent;
+  resize:none;
+  outline:none;
+}
+#comments-area form input{
+  height:40px;
+  border-radius: 8px;
+  border:none;
+  width:100%;
+  padding:0 10px;
+  font-family: 'OpenSansLight', sans-serif;
+	font-size: 14px;
+	line-height: 1.62;
+  color: #9b9b9b;
+  margin-bottom:8px;
+  outline:none;
+}
+
+#comments-area form input[type="submit"]{
+  height:40px;
+  border-radius: 8px;
+  background-color: #000;
+  color:#fff;
+  font-family: 'FuturaPTWebBook', sans-serif;
+  text-transform: uppercase;
+  line-height: 40px;
+  width:100%;
+  margin-bottom: 0;
+}
+#comments-list .children{
+  margin-left: 16px;
 }
