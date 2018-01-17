@@ -53,11 +53,10 @@
 				<?php endwhile; endif; ?>
 
 				<!-- #comments-area -->
-				<!-- <div id="comments-area" class="container">
-				php	<comments_template(); >
-
-				</div>
-				 -->
+				<div id="comments-area" class="container">
+				<?php comments_template(); ?>
+			</div>
+			
 
 			</section>
 			<!-- /#main-content -->

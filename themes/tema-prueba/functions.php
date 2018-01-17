@@ -39,6 +39,38 @@ the_post_thumbnail('post-thumbnail', ['class' => 'img-responsive responsive--ful
     echo ' <strong>' . get_bloginfo('name') . '.</strong> ';
     _e( 'All rights reserved.' );
   }
+  add_filter('excerpt_length','custom_excerpt_length'); 
+  function custom_excerpt_length( $num_words ){
+    return 30; // number of words to show
+}
+//Modificar los campos Autor, Email y Sitio web del formulario de comentarios
+function apk_modify_comment_fields( $fields ) {
+	
+	//Variables necesarias para que esto funcione
+        $commenter = wp_get_current_commenter();
+	$req = get_option( 'require_name_email' );
+	$aria_req = ( $req ? " aria-required='true'" : '' );
+ 
+	$fields =  array(
+ 
+	  'author' =>
+	    '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+	    '" size="30"' . $aria_req . ' placeholder="' . __('Nombre', 'apk') . '" />', //Editamos el campo autor
+	
+	  'email' =>
+	    '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+	    '" size="30"' . $aria_req . ' placeholder="' . __('Email', 'apk') . '" />', //Editamos el campo email
+	
+	  // 'url' =>
+	  //   '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
+	  //   '" size="30" placeholder="' . __('Tu sitio web', 'apk') . '"  />', //Editamos el campo sitio web
+	); 
+	
+	return $fields;
+	
+}
+ 
+add_filter('comment_form_default_fields', 'apk_modify_comment_fields');
   
 
 ?>
