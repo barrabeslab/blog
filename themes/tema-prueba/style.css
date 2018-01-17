@@ -894,7 +894,6 @@ padding-right: 15px;
   height: 40px;
   width: 40px;
   background: #9b9b9b;
-  border:1px solid #fff;
   border-radius: 50%;
   display:inline-block;
   margin-right:8px;
@@ -1106,5 +1105,29 @@ display: inline-block;
 }
 #comments-list .children{
   margin-left: 16px;
+}
+#comments-list .avatar, #comments-list .says{
+  display:none;
+}
+#comments-list cite{
+  font-family: 'FuturaPTWebDemi', sans-serif;
+  font-size: 14px;
+  color: #333333;
+  font-style: normal;
+}
+#comments-list .reply a{
+  font-family: 'FuturaPTWebBook', sans-serif;
+  font-size: 16px;
+  color: #333333;
+  font-style: normal;
+}
+#comments-list .comment-meta{
+  margin-bottom:16px;
+}
+#comments-list .comment-meta a,#comments-list  .comment-awaiting-moderation{
+  color:#333;
+  font-size:14px;
+  font-family: 'FuturaPTWebLight', sans-serif;
+  
 }
 
