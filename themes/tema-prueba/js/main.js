@@ -49,3 +49,15 @@ $(window).on("scroll", function() {
    $("#wtr-progress").removeClass("progress--show");
   }
 });
+
+$('#commentform').on("click", function() {
+$(".comment-form").addClass("form--focus");
+});
+$(document).mouseup(function(e) {
+  var container = $('#commentform');
+  // if the target of the click isn't the container nor a descendant of the container
+    if (!container.is(e.target) && container.has(e.target).length === 0) 
+    {
+      $(".comment-form").removeClass("form--focus");
+    }
+});

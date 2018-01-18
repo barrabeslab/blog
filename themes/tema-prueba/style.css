@@ -1058,7 +1058,7 @@ display: inline-block;
   position:absolute;
 }
 /*Comments area*/
-#comments-area h3 {
+#comments-area > h3 {
   font-family: 'FuturaPTWebDemi', sans-serif;
   font-size: 24px;
   color: #333333;
@@ -1091,6 +1091,22 @@ display: inline-block;
   margin-bottom:8px;
   outline:none;
 }
+#comments-area form .form-submit,#comments-area form #author, #comments-area form #email{
+  height:0px;
+  overflow:hidden;
+  transition: all .3s;
+  opacity:.5;
+}
+#comments-area form #author,#comments-area form #email{
+  transition: height .3s;
+}
+
+#comments-area form.form--focus .form-submit, #comments-area form.form--focus #author,#comments-area form.form--focus #email{
+  height:45px;
+  opacity:1;
+}
+
+
 
 #comments-area form input[type="submit"]{
   height:40px;
@@ -1102,6 +1118,7 @@ display: inline-block;
   line-height: 40px;
   width:100%;
   margin-bottom: 0;
+  margin-top:5px;
 }
 #comments-list .children{
   margin-left: 16px;
@@ -1109,17 +1126,44 @@ display: inline-block;
 #comments-list .avatar, #comments-list .says{
   display:none;
 }
-#comments-list cite{
+#comments-list cite,#comments-area .logged-in-as a, #comments-area #reply-title, #comments-area #reply-title a{
   font-family: 'FuturaPTWebDemi', sans-serif;
   font-size: 14px;
   color: #333333;
   font-style: normal;
+}
+#comments-area .logged-in-as a:nth-child(2), #comments-area #reply-title a#cancel-comment-reply-link{
+  font-family: 'FuturaPTWebLight', sans-serif;
+  text-decoration: underline;
+}
+#comments-area #reply-title a#cancel-comment-reply-link{
+  display: block;
+}
+
+#comments-list .reply{
+  margin-top:40px;
 }
 #comments-list .reply a{
   font-family: 'FuturaPTWebBook', sans-serif;
   font-size: 16px;
   color: #333333;
   font-style: normal;
+  transition: all .3s;
+}
+#comments-list .reply a:hover{
+  color:#0099d6;
+}
+#comments-list .reply a::before{
+  content:"";
+  display: inline-block;
+  background: url(./img/return.svg)no-repeat;
+  width:15px;
+  height:11px;
+  margin-right:8px;
+  transition: all .3s;
+}
+#comments-list .reply a:hover::before{
+  opacity:.8;
 }
 #comments-list .comment-meta{
   margin-bottom:16px;

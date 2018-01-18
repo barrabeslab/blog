@@ -71,6 +71,7 @@ function apk_modify_comment_fields( $fields ) {
 }
  
 add_filter('comment_form_default_fields', 'apk_modify_comment_fields');
+
   
 
 ?>
