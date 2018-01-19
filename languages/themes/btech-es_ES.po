@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Btech\n"
-"POT-Creation-Date: 2018-01-19 10:30+0100\n"
-"PO-Revision-Date: 2018-01-19 10:30+0100\n"
+"POT-Creation-Date: 2018-01-19 12:43+0100\n"
+"PO-Revision-Date: 2018-01-19 12:43+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -16,6 +16,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: footer.php\n"
 "X-Poedit-SearchPath-1: index.php\n"
 "X-Poedit-SearchPath-2: header.php\n"
+"X-Poedit-SearchPath-3: searchform.php\n"
 
 #: footer.php:8
 msgid "Condiciones legales"
@@ -48,6 +49,10 @@ msgid ""
 msgstr ""
 "para mantenerse al día con todas las noticias sobre sus temas tecnológicos "
 "favoritos!"
+
+#: searchform.php:3
+msgid "Buscar en Btech"
+msgstr "Buscar en Btech"
 
 #~ msgid "All rights reserved."
 #~ msgstr "Todos los derechos reservados."
