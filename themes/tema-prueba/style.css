@@ -884,6 +884,7 @@ header#menu,
 .post-info-detail, .post-author{
   display:flex;
   justify-content: space-between;
+  padding-right: 0;
 
 }
 .post-author{
@@ -923,8 +924,8 @@ padding-right: 15px;
   margin-bottom: -10px;
 }
 .post-info .actions, .nav-footer .actions{
-  flex: 0 0 25%;
-  max-width: 77px;
+  flex: 0 0 80px;
+  max-width: 80px;
   display:flex;
   justify-content: space-between;
   align-items: center;
@@ -1106,6 +1107,7 @@ display: inline-block;
   background-color: #f0f0f0;
   padding:8px;
   margin-bottom:16px;
+  position:relative;
 }
 #comments-area form textarea{
   width:100%;
@@ -1211,3 +1213,20 @@ display: inline-block;
   font-family: 'FuturaPTWebLight', sans-serif;
 
 }
+/*plugin likes*/
+.wpulike-robeen svg{
+  width:35px;
+}
+.wpulike-robeen .count-box{
+  font-size: 14px;
+  font-family: 'FuturaPTWebLight', sans-serif;
+  bottom: 12px;
+}
+.comment-body .wpulike-robeen {
+  position: absolute;
+  right: 5px;
+  bottom: 0px;
+}
+/* .wpulike-robeen .wp_ulike_is_unliked  .count-box{
+ opacity:0;
+} */
