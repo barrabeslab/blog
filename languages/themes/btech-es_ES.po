@@ -1,0 +1,31 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Btech\n"
+"POT-Creation-Date: 2018-01-18 17:17+0100\n"
+"PO-Revision-Date: 2018-01-18 17:17+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.5\n"
+"X-Poedit-Basepath: ../../themes/tema-prueba\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: _e\n"
+"X-Poedit-SearchPath-0: footer.php\n"
+
+#: footer.php:8
+msgid "Condiciones legales"
+msgstr "Condiciones legales"
+
+#: footer.php:11
+msgid "Política de cookies"
+msgstr "Política de cookies"
+
+#: footer.php:15
+msgid "Todos los derechos reservados"
+msgstr "Todos los derechos reservados"
+
+#~ msgid "All rights reserved."
+#~ msgstr "Todos los derechos reservados."

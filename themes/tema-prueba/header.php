@@ -42,9 +42,9 @@
 
 				<div class="options">
 					<ul>
-						<li><a>Spanish</a></li>
-						<li><a>English</a></li>
+						<?php echo polylang_shortcode(); ?>
 					</ul>
+
 				</div>
 
       </nav>

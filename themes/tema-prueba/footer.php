@@ -5,14 +5,14 @@
 						<img src="<?php bloginfo('template_url'); ?>/img/icon-barrabes.svg">
 						<ul class="footer-links">
 							<li>
-								<a href="legal_notice.html"> Legal Notice </a>
+								<a href="legal_notice.html"> <?php _e('Condiciones legales', 'btech' ); ?></a>
 							</li>
 							<li>
-								<a href="cookie-policy.html">Cookie Policy</a>
+								<a href="cookie-policy.html"><?php _e('Política de cookies', 'btech' ); ?></a>
 							</li>
 						</ul>
 
-						<?php create_copyright(); ?>
+						&copy; <?php echo date("Y"); echo " "; echo bloginfo('name'); echo ". ";  _e('Todos los derechos reservados', 'btech' );  echo ".";?>
 					</div>
 					<div class="col-sm-4">
 						<div class="social">
