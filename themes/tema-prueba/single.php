@@ -82,9 +82,21 @@
 			<img src="<?php bloginfo('template_url'); ?>/img/like.svg">
 			<img src="<?php bloginfo('template_url'); ?>/img/share.svg">
 		</div>
-		<div class="navigation">
+		<?php
+		$next = get_permalink(get_adjacent_post(false,'',false));
+			if 
+			($next != get_permalink()): ?>
+			<a class="navigation" href="<?php echo $next; ?>">
 			<img src="<?php bloginfo('template_url'); ?>/img/arrow_next.svg">
-		</div>
+		</a>
+		<?php endif; ?>
+
+
+		
+		
+		
+	
+	
 		</section>
 
 			<?php get_footer(); ?>

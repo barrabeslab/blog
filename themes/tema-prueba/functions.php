@@ -14,6 +14,16 @@ function apk_register_sidebars() {
     'before_title' => '<h3 class="widget-title">',
     'after_title' => '</h3>'
   ));
+
+  register_sidebar(array(
+    'name' => __('Main Slider', 'apk'),
+    'id' => 'sidebar-4',
+    'description' =>  __('Zona de Top Stories for you.', 'apk'),
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h3 class="widget-title">',
+    'after_title' => '</h3>'
+  ));
 }
 add_action('widgets_init', 'apk_register_sidebars');
 add_theme_support('post-thumbnails');
@@ -71,6 +81,7 @@ function apk_modify_comment_fields( $fields ) {
 }
 
 add_filter('comment_form_default_fields', 'apk_modify_comment_fields');
+
 
 // Polylang Shortcode - https://wordpress.org/plugins/polylang/
 // Add this code in your functions.php
