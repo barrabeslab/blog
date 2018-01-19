@@ -29,7 +29,7 @@
 				</div>
 
 				<ul class="links">
-					<li><a href="#" class="smooth">Home</a></li>
+					<li><a href="#" class="smooth"><?php _e('Inicio', 'btech'); ?></a></li>
 
 					<?php
 				  	$args = array( 'orderby' => 'slug', 'parent' => 0, 'exclude' => 1 );

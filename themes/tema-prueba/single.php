@@ -53,7 +53,7 @@
 				<div id="comments-area" class="container">
 				<?php comments_template(); ?>
 			</div>
-			
+
 
 			</section>
 			<!-- /#main-content -->
@@ -62,8 +62,8 @@
 			<section class="newsletter">
 				<div class="container">
 					<h5 class="newsletter-title">
-						<span>Join our newsletter</span>
-							to stay up to date on all news on your favourite tech topics!
+						<span><?php _e('Suscríbete a nuestro boletín', 'btech'); ?></span>
+						<?php _e('para mantenerse al día con todas las noticias sobre sus temas tecnológicos favoritos!', 'btech'); ?>
 					</h5>
 					<?php echo do_shortcode(
 					'[contact-form-7 id="1451" title="Formulario de contacto 1"]'
@@ -84,7 +84,7 @@
 		</div>
 		<?php
 		$next = get_permalink(get_adjacent_post(false,'',false));
-			if 
+			if
 			($next != get_permalink()): ?>
 			<a class="navigation" href="<?php echo $next; ?>">
 			<img src="<?php bloginfo('template_url'); ?>/img/arrow_next.svg">
@@ -92,11 +92,11 @@
 		<?php endif; ?>
 
 
-		
-		
-		
-	
-	
+
+
+
+
+
 		</section>
 
 			<?php get_footer(); ?>

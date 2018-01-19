@@ -183,7 +183,7 @@ text-decoration: none;
 .cat2 {
   color: #ffc521;
 }
-.cat3 {
+[class*='cat3'] {
   color: #cf1463;
 }
 
