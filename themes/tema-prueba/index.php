@@ -4,35 +4,45 @@
 		<section class="blog main-post container">
 			<div class="row">
 				<div class="col-xs-12">
-					<article style="background:url(http://localhost:8888/wordpress/wp-content/themes/tema-prueba/img/hero.png)no-repeat center; background-size:cover">
-						<a href="http://localhost:8888/wordpress/2017/12/18/entrada-3/">
-							<!-- <header>
-								<figure style="background:url(http://localhost:8888/wordpress/wp-content/uploads/2017/12/a6754933-b54b-4715-8276-6a0c7ef00931.jpg)no-repeat center; background-size:cover"></figure>
-							</header> -->
-							<main>
-								<h3 class="title">Artificial Intelligence As A Service: Image recognition</h3>
-								<div class="basic-font">
-									<p>Among the new storage systems that are appearing within the Big Data universe, Cassandra is one of the most interesting and significant. Cassandra is defined as a distributed and massively scalable NoSQL database, and this, from our point of view, is its greatest virtue: the capacity to scale up linearly. Additionally, Cassandra introduces very interesting […]</p>
-									<span class="span-reading-time"> 1 min read</span>
-								</div>
-							</main>
-						</a>
-						<footer class="post-info">
-							<div class="post-info-detail">
-								<div class="post-author">
-									<img alt="" src="http://0.gravatar.com/avatar/f35d54ab4199477152cc9b2b3f64ab11?s=48&amp;d=mm&amp;r=g" srcset="http://0.gravatar.com/avatar/f35d54ab4199477152cc9b2b3f64ab11?s=96&amp;d=mm&amp;r=g 2x" class="avatar avatar-48 photo" height="48" width="48">
-									<div>
-										<p>barrabes</p>
-										<p>18 diciembre, 2017</p>
+					<?php
+						$args = array( 'numberposts' => 1 );
+						$lastposts = get_posts( $args );
+						foreach($lastposts as $post) : setup_postdata($post); ?>
+							<article style="background:url(<?php the_post_thumbnail_url('full'); ?>)no-repeat center; background-size:cover">
+								<a href="<?php the_permalink(); ?>">
+									<main>
+										<h3 class="title"><?php the_title(); ?></h3>
+										<div class="basic-font">
+											<?php the_excerpt(); ?>
+											<span class="span-reading-time">
+												<?php echo do_shortcode(
+												'[rt_reading_time postfix="min read" postfix_singular="min read" label=""]'
+												); ?>
+											</span>
+										</div>
+									</main>
+								</a>
+
+								<footer class="post-info">
+									<div class="post-info-detail">
+										<div class="post-author">
+											<?php $author_id=$post->post_author; ?>
+											<?php
+												 echo get_avatar(get_the_author_meta('user_email'), $size = '48');
+											?>
+											<div>
+												<p><?php the_author_meta( 'display_name' , $author_id ); ?></p>
+												<p><?php the_time( get_option('date_format')); ?></p>
+											</div>
+										</div>
+										<div class="actions">
+											<img src="http://localhost:8888/wordpress/wp-content/themes/tema-prueba/img/like-white.svg">
+											<img src="http://localhost:8888/wordpress/wp-content/themes/tema-prueba/img/share-white.svg">
+										</div>
 									</div>
-								</div>
-								<div class="actions">
-									<img src="http://localhost:8888/wordpress/wp-content/themes/tema-prueba/img/like-white.svg">
-									<img src="http://localhost:8888/wordpress/wp-content/themes/tema-prueba/img/share-white.svg">
-								</div>
-							</div>
-						</footer>
-					</article>
+								</footer>
+							</article>
+					<?php endforeach; ?>
 				</div>
 			</div>
 		</section>
@@ -89,7 +99,7 @@
 		<section class="blog container">
 			<div class="row">
 				<main class="col-sm-12">
-				<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
+				<?php query_posts('offset=1'); if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
 					<article class="article-<?php $category = get_the_category();echo $category[0]->slug;?>">
 						<a href="<?php the_permalink(); ?>">
