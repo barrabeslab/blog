@@ -7,8 +7,11 @@
 			<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 			<article class="post">
 				<header class="post-header">
-						<figure style="background:url(<?php the_post_thumbnail_url('full'); ?>)no-repeat center; background-size:cover">
-						</figure>
+					<?php if( has_post_thumbnail()): ?>
+						<figure style="background:url(<?php the_post_thumbnail_url('full'); ?>)no-repeat center; background-size:cover"></figure>
+					<?php else: ?>
+						<figure style="background:url(<?php bloginfo('template_url'); ?>/img/hero.png)no-repeat center; background-size:cover"></figure>
+					<?php endif; ?>
 						<div class="container">
 							<div class="post-title">
 								<h5 class="color-underline-<?php $category = get_the_category();echo $category[0]->slug;?>"><?php $category = get_the_category();echo $category[0]->cat_name;?></h5>

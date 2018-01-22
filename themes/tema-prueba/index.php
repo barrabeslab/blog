@@ -8,7 +8,17 @@
 						$args = array( 'numberposts' => 1 );
 						$lastposts = get_posts( $args );
 						foreach($lastposts as $post) : setup_postdata($post); ?>
-							<article style="background:url(<?php the_post_thumbnail_url('full'); ?>)no-repeat center; background-size:cover">
+							<article style="background:url(
+								<?php
+								if ( has_post_thumbnail() ) {
+									the_post_thumbnail_url('full');
+								}
+								else {
+									echo get_bloginfo( 'template_url' ) 
+									. '/img/hero.png';
+								}
+								?>
+								)no-repeat center; background-size:cover">
 								<a href="<?php the_permalink(); ?>">
 									<main>
 										<h3 class="title"><?php the_title(); ?></h3>
@@ -107,10 +117,13 @@
 					<article class="article-<?php $category = get_the_category();echo $category[0]->slug;?>">
 						<a href="<?php the_permalink(); ?>">
 							<header>
-							<?php if( has_post_thumbnail()): ?>
-							<figure style="background:url(<?php the_post_thumbnail_url('full'); ?>)no-repeat center; background-size:cover">
-							</figure>
-							<?php endif; ?>
+									<?php if( has_post_thumbnail()): ?>
+										<figure style="background:url(<?php the_post_thumbnail_url('full'); ?>)no-repeat center; background-size:cover">
+										</figure>
+									<?php else: ?>
+										<figure style="background:url(<?php bloginfo('template_url'); ?>/img/hero.png)no-repeat center; background-size:cover">
+										</figure>
+									<?php endif; ?>
 							</header>
 							<main>
 								<h3 class="title"><?php the_title(); ?></h3>
@@ -167,7 +180,6 @@
 					<span><?php _e('Suscríbete a nuestro boletín', 'btech'); ?></span>
 					<?php _e('para mantenerse al día con todas las noticias sobre sus temas tecnológicos favoritos!', 'btech'); ?>
 				</h5>
-
 				<?php echo do_shortcode(
 					'[contact-form-7 id="1451" title="Formulario de contacto 1"]'
 				); ?>
