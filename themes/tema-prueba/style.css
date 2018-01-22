@@ -436,6 +436,8 @@ text-decoration: none;
   text-align: center;
   padding: 30px 22px 20px;
   font-size: 12px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .main-footer a {
@@ -465,7 +467,7 @@ text-decoration: none;
   display:inline-block;
 }
 .social li:not(:last-of-type){
-  margin-right: 20px;
+  margin-right: 40px;
 }
 
 /*
