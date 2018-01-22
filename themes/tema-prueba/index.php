@@ -41,7 +41,7 @@
 		<section class="top-section">
 			<div class="container">
 				<h2 class="title-2 color-underline">Top Stories
-					<span class="light-text">for you</span>
+					<!-- <span class="light-text">for you</span> -->
 				</h2>
 				<?php dynamic_sidebar( 'sidebar-4' ); ?>
 				<!-- <div class="articles">
