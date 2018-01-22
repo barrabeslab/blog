@@ -151,8 +151,8 @@
 			<section class="newsletter">
 			<div class="container">
 				<h5 class="newsletter-title">
-					<span>Join our newsletter</span>
-					to stay up to date on all news on your favourite tech topics!
+					<span><?php _e('Suscríbete a nuestro boletín', 'btech'); ?></span>
+					<?php _e('para mantenerse al día con todas las noticias sobre sus temas tecnológicos favoritos!', 'btech'); ?>
 				</h5>
 
 				<?php echo do_shortcode(

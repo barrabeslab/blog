@@ -1,3 +1,16 @@
+/*
+Theme Name: Tema de ejemplo
+Theme URI: http://franciscoamk.com/temas-wp
+Author: Francisco Aguilera G.
+Author URI: http://franciscoamk.com/
+Description: Este es un tema creado solo para razones educativas.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: white, two-columns, responsive layout
+Text Domain: btech
+*/
+
 @import url('css/bootstrap.min.css');
 /* Webfont: OpenSans */
 @font-face {
@@ -170,7 +183,7 @@ text-decoration: none;
 .cat2 {
   color: #ffc521;
 }
-.cat3 {
+[class*='cat3'] {
   color: #cf1463;
 }
 
@@ -696,7 +709,6 @@ text-decoration: none;
 }
 
 #menu nav .options {
-  color: #ffffff;
   font-size: 18px;
   font-family: 'FuturaPTWebLight', sans-serif;
   margin-top: 32px;
@@ -715,6 +727,10 @@ text-decoration: none;
 }
 #menu nav .options li:not(:last-of-type) {
   padding-right: 15px;
+}
+
+#menu nav .options .lang-item a {
+  color: #ffffff;
 }
 
 #menu.search--open .btn_search {

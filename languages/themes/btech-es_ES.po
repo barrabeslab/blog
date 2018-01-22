@@ -1,0 +1,58 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Btech\n"
+"POT-Creation-Date: 2018-01-19 12:43+0100\n"
+"PO-Revision-Date: 2018-01-19 12:43+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.5\n"
+"X-Poedit-Basepath: ../../themes/tema-prueba\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: _e\n"
+"X-Poedit-SearchPath-0: footer.php\n"
+"X-Poedit-SearchPath-1: index.php\n"
+"X-Poedit-SearchPath-2: header.php\n"
+"X-Poedit-SearchPath-3: searchform.php\n"
+
+#: footer.php:8
+msgid "Condiciones legales"
+msgstr "Condiciones legales"
+
+#: footer.php:11
+msgid "Política de cookies"
+msgstr "Política de cookies"
+
+#: footer.php:15
+msgid "Todos los derechos reservados"
+msgstr "Todos los derechos reservados"
+
+#: header.php:32
+msgid "Inicio"
+msgstr "Inicio"
+
+#: index.php:135
+msgid "No hay contenidos disponibles"
+msgstr "No hay contenidos disponibles"
+
+#: index.php:151
+msgid "Suscríbete a nuestro boletín"
+msgstr "Suscríbete a nuestro boletín"
+
+#: index.php:152
+msgid ""
+"para mantenerse al día con todas las noticias sobre sus temas tecnológicos "
+"favoritos!"
+msgstr ""
+"para mantenerse al día con todas las noticias sobre sus temas tecnológicos "
+"favoritos!"
+
+#: searchform.php:3
+msgid "Buscar en Btech"
+msgstr "Buscar en Btech"
+
+#~ msgid "All rights reserved."
+#~ msgstr "Todos los derechos reservados."
