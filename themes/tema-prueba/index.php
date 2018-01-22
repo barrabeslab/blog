@@ -36,8 +36,11 @@
 											</div>
 										</div>
 										<div class="actions">
-											<img src="http://localhost:8888/wordpress/wp-content/themes/tema-prueba/img/like-white.svg">
-											<img src="http://localhost:8888/wordpress/wp-content/themes/tema-prueba/img/share-white.svg">
+											<?php echo do_shortcode(
+											'[wp_ulike]'
+										); ?>
+											<!-- <img src="<?php bloginfo('template_url'); ?>/img/like.svg"> -->
+											<img src="<?php bloginfo('template_url'); ?>/img/share-white.svg">
 										</div>
 									</div>
 								</footer>
