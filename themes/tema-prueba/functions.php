@@ -94,4 +94,11 @@ function polylang_shortcode() {
 	return $flags;
 }
 add_shortcode( 'polylang', 'polylang_shortcode' );
+add_filter('wp_ulike_count_box_template', 'wp_ulike_change_my_count_box_template', 10, 2);
+function wp_ulike_change_my_count_box_template($string, $counter) {
+	$num = preg_replace("/[^0-9,.]/", "", $counter);
+	if($num == 0) return;
+	else return $string;
+}
+
 ?>

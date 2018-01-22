@@ -29,7 +29,10 @@
 										</div>
 									</div>
 									<div class="actions">
-										<img src="<?php bloginfo('template_url'); ?>/img/like.svg">
+									<?php echo do_shortcode(
+										'[wp_ulike]'
+									); ?>
+										<!-- <img src="<?php bloginfo('template_url'); ?>/img/like.svg"> -->
 										<img src="<?php bloginfo('template_url'); ?>/img/share.svg">
 									</div>
 								</div>
