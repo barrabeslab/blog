@@ -8,7 +8,7 @@
 						$args = array( 'numberposts' => 1 );
 						$lastposts = get_posts( $args );
 						foreach($lastposts as $post) : setup_postdata($post); ?>
-							<article style="background:url(<?php the_post_thumbnail_url('full'); ?>)no-repeat center; background-size:cover">
+							<article style="background:url(<?php the_post_thumbnail_url('full'); ?>)no-repeat center; background-size:cover;box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.5)">
 								<a href="<?php the_permalink(); ?>">
 									<main>
 										<h3 class="title"><?php the_title(); ?></h3>
