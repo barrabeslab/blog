@@ -1060,6 +1060,7 @@ display: inline-block;
 
 .main-post main {
   background: rgba(20, 32, 42, 0.6);
+  min-height: 350px;
 }
 
 .main-post article .title {
