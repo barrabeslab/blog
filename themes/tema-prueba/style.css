@@ -153,13 +153,13 @@ text-decoration: none;
   display:block;
   margin-top:5px;
 }
-.color-underline-cat1::after{
+[class*='color-underline-cat1']::after{
   background: var(--color-cat1);
 }
-.color-underline-cat2::after{
+[class*='color-underline-cat2']::after{
   background: var(--color-cat2);
 }
-.color-underline-cat3::after{
+[class*='color-underline-cat3']::after{
   background: var(--color-cat3);
 }
 [class^="color-title"]{
@@ -908,9 +908,7 @@ padding-right: 15px;
   justify-content: flex-end;
   align-items: center;
 }
-.color-underline.cat1::after{
-  background: #ffc521;
-}
+
 
 /*post comments */
 #comments-area{
